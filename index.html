@@ -82,10 +82,13 @@
           <div class="card form">
             <h4>Kontakt oss</h4>
             <!-- bevisst: ingen <label> og kun placeholder, dupliserte id-er, dårlig kontrast, farge som eneste signal -->
-            <input type="text" id="navn" placeholder="Navn*">
-            <input type="email" id="email" placeholder="E-post*"> <!-- bevisst: duplisert id -->
-            <input type="tel" placeholder="Telefon">
-            <select>
+            <form>
+            <label>Navn: <input type="text" id="navn" placeholder="Cristiano Ronaldo" required> </label>  
+            <label>Email<input type="email" id="email" placeholder="suiiiiii@hpt.no" required></label> <!-- bevisst: duplisert id -->
+            <label>Tel:<input type="tel" placeholder="400 00 900" required></label>
+
+            <label for="service">Tjeneste</label>
+            <select id="service">
               <option>Velg tema*</option>
               <option>Bestilling</option>
               <option>Support</option>
@@ -93,7 +96,10 @@
             <textarea rows="3" placeholder="Melding..."></textarea>
             <p class="help">Felt merket med <span class="required">rød farge</span> er obligatoriske.</p>
             <p class="error">skjemaet er feil utfylt</p> <!-- bevisst: lav kontrast på feilmelding, små bokstaver -->
-            <span class="fake-submit" role="button" tabindex="5">Send</span> <!-- bevisst: span som knapp, positiv tabindex -->
+            
+          
+            <input type="submit" value ="send"></input> <!-- bevisst: span som knapp, positiv tabindex -->
+            </form>
           </div>
 
           <div class="card weird-order">
